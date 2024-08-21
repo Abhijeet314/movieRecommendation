@@ -15,7 +15,22 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+.animate-gradient-slow {
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

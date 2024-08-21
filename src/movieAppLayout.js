@@ -1,5 +1,3 @@
-// MovieAppLayout.js
-
 import React from 'react';
 import SearchBar from './SearchBar';
 import SearchedMovies from './searchedmovies';
@@ -10,15 +8,17 @@ const MovieAppLayout = () => {
       {/* Header */}
       <header className="bg-black py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <h1 className="text-white text-xl font-semibold text-center">Movie App</h1>
+          <h1 className="text-transparent text-3xl font-bold bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-gradient-slow">
+            Movie Hub
+          </h1>
           {/* Add navigation or other header elements here */}
         </div>
       </header>
       
       {/* Main Content */}
       <main className="flex-grow">
-      <SearchBar />
-      <SearchedMovies />
+        <SearchBar />
+        <SearchedMovies />
       </main>
       
       {/* Footer */}
