@@ -1,24 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import MovieAppLayout from './movieAppLayout';
-import MovieDetails from './MovieDetails'; // Import the MovieDetails component
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import MovieAppLayout from './MovieAppLayout';
+import MovieDetails from './MovieDetails';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          {/* Main route showing the search page */}
-          <Route path="/" element={<MovieAppLayout />} />
-          
-          {/* Route for showing the movie details */}
-          <Route path="/movie/:id" element={<MovieDetails />} />
-        </Routes>
-      </div>
+      <Routes>
+        {/* Search movies route */}
+        <Route exact path="/" element={<MovieAppLayout />} />
+
+        {/* Movie Details route, now correctly includes movie ID in the URL */}
+        <Route exact path="/movie/:id" element={<MovieDetails />} />
+      </Routes>
     </Router>
   );
 }
 
 export default App;
-
